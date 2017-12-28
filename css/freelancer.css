@@ -192,54 +192,6 @@ section.success {
     padding-top: 75px;
   }
 }
-#portfolio .portfolio-item {
-  margin: 0 0 15px;
-  right: 0;
-}
-#portfolio .portfolio-item .portfolio-link {
-  display: block;
-  position: relative;
-  max-width: 400px;
-  margin: 0 auto;
-}
-#portfolio .portfolio-item .portfolio-link .caption {
-  background: rgba(24, 188, 156, 0.9);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: all ease 0.5s;
-  -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
-}
-#portfolio .portfolio-item .portfolio-link .caption:hover {
-  opacity: 1;
-}
-#portfolio .portfolio-item .portfolio-link .caption .caption-content {
-  position: absolute;
-  width: 100%;
-  height: 20px;
-  font-size: 20px;
-  text-align: center;
-  top: 50%;
-  margin-top: -12px;
-  color: white;
-}
-#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
-  margin-top: -12px;
-}
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
-  margin: 0;
-}
-#portfolio * {
-  z-index: 2;
-}
-@media (min-width: 767px) {
-  #portfolio .portfolio-item {
-    margin: 0 0 30px;
-  }
-}
 .floating-label-form-group {
   position: relative;
   margin-bottom: 0;
@@ -515,11 +467,10 @@ div#maincontent {
   outline: none;
 }
 
-
 /*  about & timeline  */
 .about{
     width: 100%;
-    padding: 140px 0 0 0;
+    padding: 70px 0 0 0;
     background: #fafafa;
     text-align: center;
 }
@@ -544,7 +495,7 @@ div#maincontent {
 
 .about .timeline .column{
     width: 100%;
-    overflow: hidden;
+    /*overflow: hidden; Hid this as negative margins are set in timeline to decrease white spaces*/
     text-align: left;
 }
 
@@ -552,18 +503,36 @@ div#maincontent {
     width: 488px;
     border-right: 2px solid #efeeee;
     float: left;
-    padding: 60px 30px 0 30px;
+    padding: 0px 30px 0 30px;
     position: relative;
+    margin-top: -40px;
 }
 
 .about .timeline .right_row{
     width: 490px;
     float: right;
-    padding: 60px 30px 0 30px;
+    padding: 0px 30px 0 30px;
     border-left: 2px solid #efeeee;
+    position: relative;
+    margin-top: -40px;
+}
+@media (max-width:550px) {
+.about .timeline .left_row{
+    width: 450px;
+    border-right: 2px solid #efeeee;
+    float: left;
+    padding: 5px 30px 0 30px;
     position: relative;
 }
 
+.about .timeline .right_row{
+    width: 450px;
+    border-right: 2px solid #efeeee;
+    float: left;
+    padding: 5px 30px 0 30px;
+    position: relative;
+}
+}
 .about .timeline .right_row h2,
 .about .timeline .left_row h2{
     color: #535353;
@@ -587,12 +556,13 @@ div#maincontent {
 
 .about .timeline .right_row.first,
 .about .timeline .left_row.first{
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .about .timeline .right_row.last,
 .about .timeline .left_row.last{
-    padding-bottom: 140px;
+	padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 
@@ -629,7 +599,7 @@ div#maincontent {
 /*  about  */
 
 .wrapper{
-    width: 1100px;
+    width: 69.7em;/*976px;*/
     margin: 0 auto;
     position: relative;
 }
@@ -644,4 +614,314 @@ div#maincontent {
  
 .clearfix {  
     *zoom: 1;  
+}
+
+/*		Testimonials section 		*/
+
+.testimonials{
+	padding: 100px 0;
+}
+
+.testimonials .testimonials_list{
+	max-width: 820px;
+	margin: 0 auto;
+}
+
+.testimonials .testimonials_list blockquote{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.testimonials .testimonials_list blockquote p{
+	color: #757171;
+	font-family: "open_regular", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	margin-bottom: 50px;
+	line-height: 36px;
+}
+
+.testimonials .testimonials_list blockquote footer:before,
+.testimonials .testimonials_list blockquote footer:after{
+	content: none;
+}
+
+.testimonials .testimonials_list blockquote .author,
+.testimonials .testimonials_list blockquote .job{
+	display: block;
+}
+
+.testimonials .testimonials_list blockquote .author{
+	color: #4b4848;
+	font-family: "open_semibold", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	margin-bottom: 10px; 
+}
+
+.testimonials .testimonials_list blockquote .job{
+	color: #6e6d6d;
+	font-family: "open_regular", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+.owl-fade-in {
+  -webkit-animation: fadeIn .7s both ease;
+  -moz-animation: fadeIn .7s both ease;
+  animation: fadeIn .7s both ease;
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+/* Keyframes */
+/*empty*/
+@-webkit-keyframes empty {
+  0% {opacity: 1}
+}
+@-moz-keyframes empty {
+  0% {opacity: 1}
+}
+@keyframes empty {
+  0% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+@keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+
+
+/*  about & timeline  */
+.about{
+    width: 100%;
+    padding: 70px 0 0 0;
+    background: #fafafa;
+    text-align: center;
+}
+
+.about .about_txt{
+    width: 70%;
+    color: #797979;
+    font-family: "opensans-regular", arial;
+    font-size: 16px;
+    margin: 60px auto;
+    line-height: 30px;
+}
+
+.about .timeline hr{
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #efeeee;
+    margin: 0 auto;
+    border: 0;
+}
+
+.about .timeline .column{
+    width: 100%;
+    /*overflow: hidden; Hid this as negative margins are set in timeline to decrease white spaces*/
+    text-align: left;
+}
+
+.about .timeline .left_row{
+    width: 488px;
+    border-right: 2px solid #efeeee;
+    float: left;
+    padding: 0px 30px 0 30px;
+    position: relative;
+    margin-top: -40px;
+}
+
+.about .timeline .right_row{
+    width: 490px;
+    float: right;
+    padding: 0px 30px 0 30px;
+    border-left: 2px solid #efeeee;
+    position: relative;
+    margin-top: -40px;
+}
+@media (max-width:550px) {
+.about .timeline .left_row{
+    width: 450px;
+    border-right: 2px solid #efeeee;
+    float: left;
+    padding: 5px 30px 0 30px;
+    position: relative;
+}
+
+.about .timeline .right_row{
+    width: 450px;
+    border-right: 2px solid #efeeee;
+    float: left;
+    padding: 5px 30px 0 30px;
+    position: relative;
+}
+}
+.about .timeline .right_row h2,
+.about .timeline .left_row h2{
+    color: #535353;
+    font-family: "opensans-semibold", arial;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    line-height: 24px;
+    letter-spacing: .5px;
+}
+
+.about .timeline .right_row p,
+.about .timeline .left_row p{
+    color: #797979;
+    font-family: "opensans-regular", arial;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: .5px;
+}
+
+.about .timeline .right_row.first,
+.about .timeline .left_row.first{
+    padding-top: 50px;
+}
+
+.about .timeline .right_row.last,
+.about .timeline .left_row.last{
+	padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.about .timeline .right_row .bullet_point{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 60px;
+    margin-left: -12px;
+}
+
+.about .timeline .left_row .bullet_point{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 60px;
+    margin-right: -12px;
+}
+
+.about .timeline .right_row.first .bullet_point,
+.about .timeline .left_row.first .bullet_point{
+    margin-top: 100px;
+}
+
+
+.about hr.end_timeline{
+    display: block;
+    width: 2px;
+    height: 40px;
+    border: 0;
+    background: #efeeee;
+    left: 50%;
+}
+/*  about  */
+
+.wrapper{
+    width: 69.7em;/*976px;*/
+    margin: 0 auto;
+    position: relative;
+}
+.clearfix:before,  
+.clearfix:after {  
+    content: " ";  
+    display: table;  
+}  
+.clearfix:after {  
+    clear: both;  
+}  
+ 
+.clearfix {  
+    *zoom: 1;  
+}
+
+/*		Testimonials section 		*/
+
+.testimonials{
+	padding: 100px 0;
+}
+
+.testimonials .testimonials_list{
+	max-width: 820px;
+	margin: 0 auto;
+}
+
+.testimonials .testimonials_list blockquote{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.testimonials .testimonials_list blockquote p{
+	color: #757171;
+	font-family: "open_regular", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	margin-bottom: 50px;
+	line-height: 36px;
+}
+
+.testimonials .testimonials_list blockquote footer:before,
+.testimonials .testimonials_list blockquote footer:after{
+	content: none;
+}
+
+.testimonials .testimonials_list blockquote .author,
+.testimonials .testimonials_list blockquote .job{
+	display: block;
+}
+
+.testimonials .testimonials_list blockquote .author{
+	color: #4b4848;
+	font-family: "open_semibold", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	margin-bottom: 10px; 
+}
+
+.testimonials .testimonials_list blockquote .job{
+	color: #6e6d6d;
+	font-family: "open_regular", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+.owl-fade-in {
+  -webkit-animation: fadeIn .7s both ease;
+  -moz-animation: fadeIn .7s both ease;
+  animation: fadeIn .7s both ease;
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+/* Keyframes */
+/*empty*/
+@-webkit-keyframes empty {
+  0% {opacity: 1}
+}
+@-moz-keyframes empty {
+  0% {opacity: 1}
+}
+@keyframes empty {
+  0% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+@keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
 }

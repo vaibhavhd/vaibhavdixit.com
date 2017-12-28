@@ -32,7 +32,7 @@
 
 .about .timeline .column{
     width: 100%;
-    overflow: hidden;
+    /*overflow: hidden; Hid this as negative margins are set in timeline to decrease white spaces*/
     text-align: left;
 }
 
@@ -40,18 +40,36 @@
     width: 488px;
     border-right: 2px solid #efeeee;
     float: left;
-    padding: 60px 30px 0 30px;
+    padding: 0px 30px 0 30px;
     position: relative;
+    margin-top: -40px;
 }
 
 .about .timeline .right_row{
     width: 490px;
     float: right;
-    padding: 60px 30px 0 30px;
+    padding: 0px 30px 0 30px;
     border-left: 2px solid #efeeee;
+    position: relative;
+    margin-top: -40px;
+}
+@media (max-width:550px) {
+.about .timeline .left_row{
+    width: 450px;
+    border-right: 2px solid #efeeee;
+    float: left;
+    padding: 5px 30px 0 30px;
     position: relative;
 }
 
+.about .timeline .right_row{
+    width: 450px;
+    border-right: 2px solid #efeeee;
+    float: left;
+    padding: 5px 30px 0 30px;
+    position: relative;
+}
+}
 .about .timeline .right_row h2,
 .about .timeline .left_row h2{
     color: #535353;
@@ -75,12 +93,13 @@
 
 .about .timeline .right_row.first,
 .about .timeline .left_row.first{
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .about .timeline .right_row.last,
 .about .timeline .left_row.last{
-    padding-bottom: 140px;
+	padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 

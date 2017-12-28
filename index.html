@@ -22,12 +22,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body id="page-top" class="index">
@@ -105,7 +99,7 @@
 				</p>
 			</div>
 			<div class="row">
-				<div class="container wrapper clearfix timeline">
+				<div class="wrapper clearfix timeline">
 					<hr class="hseparator"/>	
 					<div class="column">
 						<div class="right_row first">
@@ -157,7 +151,7 @@
 					<div class="column">
 						<div class="right_row last">
 							<img src="img/timeline_cercle.png" alt="" title="" class="bullet_point"/>
-							<h2>NEW</h2>
+							<h4>NEW</h4>
 							<p>Now looking for full-time opportunities in cybersecurity, SDN, NFV and information assurance</p>
 						</div>	
 					</div>
@@ -182,11 +176,9 @@
 					HONEYPROXY: Design and Implementation of Next-Generation Honeynet via SDN</a></h4>
 					<p class="">Goal: To lure attackers to target an imitated version of production network(HoneyNet) and later analyze their methods
 					 and intentions by employing a covert proxy (HoneyProxy). <br> Process: Design and develop an SDN based network of Honeypots which run dummy WEB
-					 and FTP services (which are potential target of these attackers). Go public with this imitated services. Implement a proxy which replies to 
-					 attackers request and covertly collects logs for behavioral analysis. Prevent internal propagation of malware to production network by leveraging
-					 SDN's centralized view to install secured flow policies. Analyze the method and intentions of attacks using Elasticsearch on the LogStatsh pipeline 
-					 and displaying the analysis on Kibana dashboard. Do not leak the "honey" - prevent Honeypots from being fingerprinted by improving covert proxy 
-					 based on fingerprinting attempts.</p>
+					 and FTP services (potential target of these attackers). Go public with this imitated services. Prevent internal propagation of malware
+					 to production network by leveraging SDN's centralized view to install secured flow policies. Analyze the method and intentions of attacks.
+					 Do not leak the "honey" - prevent Honeypots from being fingerprinted by dynamically improving covert proxy.</p>
 				</div>
 			</div>
 			<div class="row">
@@ -202,6 +194,13 @@
 		</div>
 	</section>
 	   <!-- Portfolio Grid Section -->
+  <style>
+    #portfolio {
+      background-color: #fafafa;
+      padding-top:20px;
+      padding-bottom:30px
+    }
+  </style>
 	<section id="portfolio">
 		<div class="container">
 			<div class="row">
