@@ -32,7 +32,7 @@
 
 .about .timeline .column{
     width: 100%;
-    /*overflow: hidden; Hid this as negative margins are set in timeline to decrease white spaces*/
+    overflow: hidden; /*Hid this as negative margins are set in timeline to decrease white spaces*/
     text-align: left;
 }
 
@@ -42,7 +42,7 @@
     float: left;
     padding: 0px 30px 0 30px;
     position: relative;
-    margin-top: -40px;
+    /*margin-top: -40px;*/
 }
 
 .about .timeline .right_row{
@@ -51,7 +51,7 @@
     padding: 0px 30px 0 30px;
     border-left: 2px solid #efeeee;
     position: relative;
-    margin-top: -40px;
+    /*margin-top: -40px;*/
 }
 @media (max-width:550px) {
 .about .timeline .left_row{
